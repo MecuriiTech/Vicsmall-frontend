@@ -54,7 +54,7 @@ export default function PromotionalSection() {
   }, []);
 
   return (
-    <section className="relative mx-auto mt-10 sm:mt-20 px-4 sm:px-8 lg:px-16 w-full max-w-screen-xl h-auto bg-[#FF8C48] rounded-[23px] flex flex-col sm:flex-row items-center justify-between py-8 lg:py-12 overflow-hidden">
+    <section className="relative mx-auto mt-24 sm:mt-20 px-4 sm:px-8 lg:px-16 w-full max-w-screen-xl h-auto bg-[#FF8C48] rounded-[23px] flex flex-col sm:flex-row items-center justify-between py-8 lg:py-12 overflow-hidden">
       <div
         className="absolute inset-0 bg-no-repeat bg-center"
         style={{ backgroundImage: "url('/path-to-image.png')" }}

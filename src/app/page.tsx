@@ -8,6 +8,7 @@ import Watches from "./components/Watches";
 import ForTheLadies from "./components/Ladies";
 import Topcategory from "./components/Topcategories";
 import Recommend from "./components/Recommended";
+// import Navigation from "./components/Navbar";
 
 
 
@@ -15,6 +16,7 @@ export default function Home() {
   return (
     <>
      {/* <MenuBar /> */}
+     {/* <Navigation /> */}
      <PromotionalSection />
      <MensShoesRow />
      <LimitedOffer />
