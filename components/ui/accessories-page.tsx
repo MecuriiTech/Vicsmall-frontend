@@ -1,4 +1,4 @@
-import { useState } from "react"
+
 import { Heart, ShoppingCart } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -13,13 +13,48 @@ interface Product {
   colors?: string[]
 }
 
-const products: Product[] = Array.from({ length: 16 }, (_, i) => ({
-  id: i + 1,
-  name: "Product Name",
-  price: 34500,
-  image: "/placeholder.svg",
-  colors: ["#FF0000", "#00FF00", "#0000FF"]
-}))
+const products: Product[] = [
+  {
+    id: 1,
+    name: "Elegant Watch",
+    price: 34500,
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/watch-1-Rl0Yd7Yl5Ue9Tz9Hy2Jk3Lm8.jpg",
+    colors: ["#C0C0C0", "#FFD700", "#8B4513"]
+  },
+  {
+    id: 2,
+    name: "Diamond Ring",
+    price: 55000,
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ring-1-Qw2Er4Ty6Ui8Op0As3Df5Gh7.jpg",
+    colors: ["#FFD700", "#C0C0C0", "#FFFFFF"]
+  },
+  {
+    id: 3,
+    name: "Gold Anklet",
+    price: 28000,
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/anklet-1-Zx9Cv8Bn7Nm6Kl4Jh2Fg3Ds5.jpg",
+    colors: ["#FFD700", "#FFA500"]
+  },
+  {
+    id: 4,
+    name: "Silver Wrist Stud",
+    price: 15000,
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/wrist-stud-1-Pl0Oi9Uy7Tr5Ew3Qa2Sd4Fg6.jpg",
+    colors: ["#C0C0C0", "#000000", "#FFFFFF"]
+  },
+  // Add more products with unique images here...
+]
+
+// Fill the rest of the array with the existing placeholder products
+while (products.length < 16) {
+  products.push({
+    id: products.length + 1,
+    name: "Product Name",
+    price: 34500,
+    image: "/placeholder.svg",
+    colors: ["#FF0000", "#00FF00", "#0000FF"]
+  })
+}
 
 const categories = [
   "All Accessories",
@@ -30,9 +65,9 @@ const categories = [
 ]
 
 export default function Component() {
-  const [selectedCategory, setSelectedCategory] = useState("All Accessories")
-  const [minPrice, setMinPrice] = useState("")
-  const [maxPrice, setMaxPrice] = useState("")
+  const [selectedCategory, setSelectedCategory] = ("All Accessories")
+  const [minPrice, setMinPrice] = ("")
+  const [maxPrice, setMaxPrice] = ("")
 
   return (
     <div className="container mx-auto px-4 py-8">
