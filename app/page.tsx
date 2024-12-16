@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Heart, ShoppingCart, Star } from 'lucide-react'
+import { ShoppingCart, Star } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import Link from "next/link"
@@ -23,7 +23,7 @@ const products: Product[] = [
     id: 1,
     name: "Elegant Watch",
     price: 34500,
-    image: "https://images.unsplash.com/photo-1524592094714-0f0654e20314",
+    image: "/1.jpeg",
     colors: ["#C0C0C0", "#FFD700", "#8B4513"],
     rating: 4
   },
@@ -31,7 +31,7 @@ const products: Product[] = [
     id: 2,
     name: "Diamond Ring",
     price: 55000,
-    image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e",
+    image: "/2.png",
     colors: ["#FFD700", "#C0C0C0", "#FFFFFF"],
     rating: 5
   },
@@ -39,7 +39,7 @@ const products: Product[] = [
     id: 3,
     name: "Gold Anklet",
     price: 28000,
-    image: "https://images.unsplash.com/photo-1611652022419-a9419f74343d",
+    image: "/3.jpeg",
     colors: ["#FFD700", "#FFA500"],
     rating: 3
   },
@@ -47,10 +47,101 @@ const products: Product[] = [
     id: 4,
     name: "Silver Wrist Stud",
     price: 15000,
-    image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908",
+    image: "/4.jpeg",
     colors: ["#C0C0C0", "#000000", "#FFFFFF"],
     rating: 4
   },
+  {
+    id: 5,
+    name: "Silver",
+    price: 15000,
+    image: "/5.jpeg",
+    colors: ["#C0C0C0", "#000000", "#FFFFFF"],
+    rating: 4
+  },
+  {
+    id: 6,
+    name: "Silver",
+    price: 15000,
+    image: "/6.jpeg",
+    colors: ["#C0C0C0", "#000000", "#FFFFFF"],
+    rating: 4
+  },
+  {
+    id: 7,
+    name: "Silver",
+    price: 15000,
+    image: "/7.jpeg",
+    colors: ["#C0C0C0", "#000000", "#FFFFFF"],
+    rating: 4
+  },
+  {
+    id: 8,
+    name: "Silver",
+    price: 15000,
+    image: "/8.jpeg",
+    colors: ["#C0C0C0", "#000000", "#FFFFFF"],
+    rating: 4
+  },
+  {
+    id: 9,
+    name: "Silver",
+    price: 15000,
+    image: "/9.jpeg",
+    colors: ["#C0C0C0", "#000000", "#FFFFFF"],
+    rating: 4
+  },
+  {
+    id: 10,
+    name: "Silver",
+    price: 15000,
+    image: "/10.jpeg",
+    colors: ["#C0C0C0", "#000000", "#FFFFFF"],
+    rating: 4
+  },
+  {
+    id: 11,
+    name: "Silver",
+    price: 15000,
+    image: "/11.jpeg",
+    colors: ["#C0C0C0", "#000000", "#FFFFFF"],
+    rating: 4
+  },
+  {
+    id: 12,
+    name: "Silver",
+    price: 15000,
+    image: "/12.jpeg",
+    colors: ["#C0C0C0", "#000000", "#FFFFFF"],
+    rating: 4
+  },
+  {
+    id: 13,
+    name: "Silver",
+    price: 15000,
+    image: "/13.jpeg",
+    colors: ["#C0C0C0", "#000000", "#FFFFFF"],
+    rating: 4
+  },
+  {
+    id: 14,
+    name: "Silver",
+    price: 15000,
+    image: "/14.jpeg",
+    colors: ["#C0C0C0", "#000000", "#FFFFFF"],
+    rating: 4
+  },
+  {
+    id: 15,
+    name: "Silver",
+    price: 15000,
+    image: "/15.jpeg",
+    colors: ["#C0C0C0", "#000000", "#FFFFFF"],
+    rating: 4
+  },
+
+ 
+ 
 ]
 
 // Fill the rest of the array with the existing placeholder products
@@ -59,9 +150,9 @@ while (products.length < 16) {
     id: products.length + 1,
     name: "Product Name",
     price: 34500,
-    image: "/placeholder.svg",
+    image: "/16.jpeg",
     colors: ["#FF0000", "#00FF00", "#0000FF"],
-    rating: Math.floor(Math.random() * 5) + 1
+    rating: Math.floor(Math.random() * 4) + 1
   })
 }
 
@@ -161,12 +252,12 @@ export default function Component() {
                 </Button>
               ))}
             </div>
-          </div>
+          </div> 
         </div>
 
         {/* Product Grid */}
         
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {filteredProducts.map((product) => (
               <div key={product.id} className="group relative bg-white rounded-lg shadow-md overflow-hidden">
                 <div className="aspect-square overflow-hidden relative">
